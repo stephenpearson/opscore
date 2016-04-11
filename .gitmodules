@@ -1,0 +1,3 @@
+[submodule "chef/cobbler/cookbooks/cobbler-cookbook"]
+	path = chef/cobbler/cookbooks/cobbler-cookbook
+	url = https://github.com/stephenpearson/cobbler-cookbook.git

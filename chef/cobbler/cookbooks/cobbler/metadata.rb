@@ -1,7 +1,0 @@
-name 'cobbler'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
-license 'all_rights'
-description 'Installs/Configures cobbler'
-long_description 'Installs/Configures cobbler'
-version '0.1.0'
