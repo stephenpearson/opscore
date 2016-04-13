@@ -14,7 +14,10 @@ else
 fi
 
 # Install Chef client
-wget -O chef.deb -nv http://192.168.121.1/chef_12.8.1-1_amd64.deb
+if [ ! -f "chef.deb" ]
+then
+  wget -O chef.deb -nv http://192.168.121.1/chef_12.8.1-1_amd64.deb
+fi
 dpkg-query -l chef >/dev/null 2>&1
 if [ "$?" != "0" ]
 then
