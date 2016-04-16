@@ -1,6 +1,10 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+unless File.exist?('ssh_keys/virsh') and File.exist?('ssh_keys/virsh.pub')
+  raise "** No SSH keys defined.  See ssh-keys/README.txt"
+end
+
 Vagrant.configure(2) do |config|
   config.vm.box_check_update = false
 

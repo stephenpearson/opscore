@@ -1,5 +1,16 @@
 #!/bin/bash
 
+# Insert virsh ssh key
+if [ ! -f "/vagrant/ssh_keys/virsh" -o ! -f "/vagrant/ssh_keys/virsh.pub" ]
+then
+  echo "No virsh key defined.  See ssh_keys/README.txt"
+  exit 1
+fi
+cp /vagrant/ssh_keys/virsh /root/.ssh/id_rsa
+cp /vagrant/ssh_keys/virsh.pub /root/.ssh/id_rsa.pub
+chmod 400 /root/.ssh/id_rsa
+chown -R root:root /root/.ssh
+
 # Update APT cache at most once every six hours
 PKG_CACHE="/var/cache/apt/pkgcache.bin"
 if [ ! -f "$PKG_CACHE" ]
