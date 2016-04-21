@@ -4,3 +4,6 @@
 [submodule "chef/cobbler/cookbooks/cobbler"]
 	path = chef/cobbler/cookbooks/cobbler
 	url = https://github.com/stephenpearson/cobbler-cookbook.git
+[submodule "chef/cobbler/cookbooks/opscore-cobbler"]
+	path = chef/cobbler/cookbooks/opscore-cobbler
+	url = https://github.com/stephenpearson/opscore-cobbler-cookbook.git

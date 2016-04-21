@@ -6,6 +6,8 @@ then
   echo "No virsh key defined.  See ssh_keys/README.txt"
   exit 1
 fi
+mkdir /root/.ssh
+chmod 0700 /root/.ssh
 cp /vagrant/ssh_keys/virsh /root/.ssh/id_rsa
 cp /vagrant/ssh_keys/virsh.pub /root/.ssh/id_rsa.pub
 chmod 400 /root/.ssh/id_rsa
